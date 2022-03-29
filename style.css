@@ -1,47 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 @font-face {
   font-family: "bookletter";
-  src: url("fonts/goudy_bookletter_1911-webfont.eot?#iefix")
+  src: url("/fonts/goudy_bookletter_1911-webfont.eot?#iefix")
       format("embedded-opentype"),
-    url("fonts/goudy_bookletter_1911-webfont.woff") format("woff"),
-    url("fonts/goudy_bookletter_1911-webfont.ttf") format("truetype"),
-    url("fonts/goudy_bookletter_1911-webfont.svg#bookletter") format("svg");
+    url("/fonts/goudy_bookletter_1911-webfont.woff") format("woff"),
+    url("/fonts/goudy_bookletter_1911-webfont.ttf") format("truetype"),
+    url("/fonts/goudy_bookletter_1911-webfont.svg#bookletter") format("svg");
 }
 
 @font-face {
   font-family: "stm";
-  src: url("fonts/GoudyStM-webfont.eot?#iefix") format("embedded-opentype"),
-    url("fonts/GoudyStM-webfont.woff") format("woff"),
-    url("fonts/GoudyStM-webfont.ttf") format("truetype"),
-    url("fonts/GoudyStM-webfont.svg#stm") format("svg");
+  src: url("/fonts/GoudyStM-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/GoudyStM-webfont.woff") format("woff"),
+    url("/fonts/GoudyStM-webfont.ttf") format("truetype"),
+    url("/fonts/GoudyStM-webfont.svg#stm") format("svg");
 }
 
 @font-face {
   font-family: "istm";
-  src: url("fonts/GoudyStM-Italic-webfont.eot?#iefix")
+  src: url("/fonts/GoudyStM-Italic-webfont.eot?#iefix")
       format("embedded-opentype"),
-    url("fonts/GoudyStM-Italic-webfont.woff") format("woff"),
-    url("fonts/GoudyStM-Italic-webfontt.ttf") format("truetype"),
-    url("fonts/GoudyStM-Italic-webfont.svg#istm") format("svg");
+    url("/fonts/GoudyStM-Italic-webfont.woff") format("woff"),
+    url("/fonts/GoudyStM-Italic-webfontt.ttf") format("truetype"),
+    url("/fonts/GoudyStM-Italic-webfont.svg#istm") format("svg");
 }
 
 body {
-  font-family: "stm", "Times New Roman", "lora", serif;
+  font-family: "stm", "Times New Roman", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5rem;
 }
 
 .stm {
-  font-family: "stm", serif;
+  font-family: "stm", "Times New Roman", serif;
 }
 
 .istm {
-  font-family: "istm", serif;
+  font-family: "istm", "Times New Roman", serif;
 }
 
 .courier {
   font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  display: block;
+  width: 100%;
+}
+
+.header a,
+#header-wrapper .header a,
+ul.menu li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.hovershowlinks a {
+  transition: 0.2s color linear;
+}
+
+.hovershowlinks a:hover,
+.hovershowlinks a:active {
+  color: #3377cc;
 }
 
 .center {
@@ -80,6 +114,172 @@ body {
   font-style: italic;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem 2rem;
+}
+
+#left,
+#right {
+  vertical-align: top;
+}
+
+#left {
+  flex-basis: 25%;
+}
+
+#logo {
+  width: 100%;
+  max-width: 600px;
+}
+
+#right {
+  flex-basis: 75%;
+}
+
+#header-wrapper {
+  text-align: center;
+}
+
+ul.menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  margin: 1rem 2rem;
+}
+
+.menu {
+  transition: 0.2s all linear;
+  text-transform: uppercase;
+}
+
+.menu li a {
+  color: green;
+}
+
+.menu li:hover,
+.menu li:active {
+  transform: rotate(7.5deg);
+}
+
+.cmenu a:link,
+.cmenu a:visited {
+  color: #3377cc;
+}
+
+.menu li a:hover,
+.menu li a:active {
+  color: #3377cc;
+}
+
+.frontimgbox {
+  margin: 1rem 20%;
+}
+
+.bookbook-ad-wrapper {
+  bottom: 0px;
+  margin: 1em 0 0 0;
+  padding: 10px 3px 10px 3px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bookbook-ad-wrapper > a {
+  border: 1px solid white;
+  margin: 0 2px;
+  text-decoration: none;
+}
+
+.bookbook-light {
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 -3px 0 3px;
+}
+
+.bookbook-light a:hover {
+  border-color: #3377cc;
+}
+
+.bookbook-ad-wrapper > a > span:first-child,
+.bookbook-light > span:first-child {
+  background-color: white;
+  color: black;
+  text-transform: none;
+  padding: 0 4px;
+  margin: 0 -2px 0 0;
+}
+
+.bookbook-ad-wrapper > a > span:last-child,
+.bookbook-light > span:last-child {
+  background-color: black;
+  color: white;
+  text-transform: none;
+  padding: 0 4px;
+  margin: 0 0 0 -2px;
+}
+
+.author-list {
+  list-style-type: none;
+}
+
+.author-list li {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.author-list li .a-info {
+  flex-basis: 70%;
+  padding: 1rem;
+}
+
+.author-list li .a-photo {
+  flex-basis: 30%;
+}
+
+.author-list li .a-photo img {
+  width: 100%;
+}
+
+.book {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.book:last-child {
+  border: none;
+}
+
+.book > div,
+.book > ul {
+  padding: 1rem;
+}
+
+.book > .book-image-box {
+  flex-basis: 40%;
+}
+
+.book > .book-image-box > img {
+  width: 100%;
+}
+
+.book > .book-info {
+  flex-basis: 60%;
+}
+
+/* 
+
 #wrapper {
   width: 100%;
   height: 100%;
@@ -90,16 +290,9 @@ body {
   float: left;
 }
 
-#logo {
-  float: right;
-  width: 100%;
-  max-width: 600px;
-}
 
-#right {
-  width: 75%;
-  float: left;
-}
+
+
 
 table.menu {
   text-align: center;
@@ -123,53 +316,7 @@ a:active {
   text-decoration: none;
 }
 
-.menu {
-  -moz-transition: 0.2s all linear;
-  -webkit-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-}
 
-.menu a {
-  -moz-transition: 0.2s all linear;
-  -webkit-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-}
-
-.cmenu {
-  -moz-transition: 0.2s all linear;
-  -webkit-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-}
-
-.cmenu a {
-  -moz-transition: 0.2s all linear;
-  -webkit-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-}
-
-.menu a:link,
-.menu a:visited {
-}
-
-.cmenu a:link,
-.cmenu a:visited {
-  color: #3377cc;
-}
-
-.menu a:hover,
-.menu a:active {
-  color: #3377cc;
-}
-
-.menu td:hover,
-.menu td:active {
-  -webkit-transform: rotate(7.5deg);
-  -moz-transform: rotate(7.5deg);
-  -ms-transform: rotate(7.5deg);
-  -o-transform: rotate(7.5deg);
-  transform: rotate(7.5deg);
-  filter: progid:DXImageTransform.Microsoft.Matrix;
-}
 
 .dllink a:link,
 .dllink a:visited {
@@ -203,27 +350,12 @@ a:active {
   text-decoration: underline;
 }
 
-.hovershowlinks a {
-  -moz-transition: 0.2s color linear;
-  -webkit-transition: 0.2s color linear;
-  transition: 0.2s color linear;
-}
-
-.hovershowlinks a:hover,
-.hovershowlinks a:active {
-  color: #3377cc;
-}
-
 a img {
   text-decoration: none;
   border: 0 none;
 }
 
-#header-wrapper {
-  left: 25%;
-  z-index: 1;
-  background-color: white;
-}
+
 
 #content-wrapper {
   overflow: auto;
@@ -241,11 +373,6 @@ a img {
   padding: 1em 8% 0em 8%;
 }
 
-.frontimgbox {
-  padding: 1em 30% 1em 30%;
-  width: 40%;
-}
-
 .frontimg {
   width: 100%;
   height: auto;
@@ -256,7 +383,7 @@ a img {
 
 .videoWrapper {
   position: relative;
-  padding-bottom: 75%; /* 4:3 */
+  padding-bottom: 75%;
   padding-top: 2em 0 2em 0;
   height: 0;
 }
@@ -269,30 +396,6 @@ a img {
   width: 80%;
 }
 
-.bookbookad {
-  bottom: 0px;
-  margin: 1em 0 0 0;
-  padding: 10px 0px 10px 0px;
-  background-color: black;
-  color: white;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  text-align: center;
-}
-
-.book {
-  border: 0px solid black;
-  border-bottom: 1px dotted black;
-  padding: 10px;
-  overflow: auto;
-  height: auto;
-  position: relative;
-  width: 100%;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; /* IE 8+ */
-}
-
 .book-image-box {
   float: left;
   width: 40%;
@@ -302,15 +405,6 @@ a img {
   width: 100%;
   max-width: 300px;
   float: left;
-}
-
-.book-text {
-  float: left;
-  width: 60%;
-  padding-left: 20px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; /* IE 8+ */
 }
 
 .book-clear {
@@ -438,3 +532,4 @@ a img {
     width: 50%;
   }
 }
+*/
