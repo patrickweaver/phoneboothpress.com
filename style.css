@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "bookletter";
+  src: url("/fonts/GoudyBookletter1911-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "stm";
+  src: url("/fonts/GoudyStM-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "istm";
+  src: url("/fonts/GoudyStM-Italic-webfontt.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,34 +21,11 @@ html {
   font-size: 62.5%;
 }
 
-@font-face {
-  font-family: "bookletter";
-  src: url("/fonts/goudy_bookletter_1911-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/goudy_bookletter_1911-webfont.woff") format("woff"),
-    url("/fonts/goudy_bookletter_1911-webfont.ttf") format("truetype"),
-    url("/fonts/goudy_bookletter_1911-webfont.svg#bookletter") format("svg");
-}
-
-@font-face {
-  font-family: "stm";
-  src: url("/fonts/GoudyStM-webfont.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/GoudyStM-webfont.woff") format("woff"),
-    url("/fonts/GoudyStM-webfont.ttf") format("truetype"),
-    url("/fonts/GoudyStM-webfont.svg#stm") format("svg");
-}
-
-@font-face {
-  font-family: "istm";
-  src: url("/fonts/GoudyStM-Italic-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/GoudyStM-Italic-webfont.woff") format("woff"),
-    url("/fonts/GoudyStM-Italic-webfontt.ttf") format("truetype"),
-    url("/fonts/GoudyStM-Italic-webfont.svg#istm") format("svg");
-}
-
 body {
   font-family: "stm", "Times New Roman", serif;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
@@ -43,6 +35,10 @@ h4,
 h5,
 h6 {
   margin: 0.5rem;
+}
+
+.bookletter {
+  font-family: "bookletter", "Times New Roman", serif;
 }
 
 .stm {
@@ -60,6 +56,10 @@ h6 {
 .header {
   display: block;
   width: 100%;
+}
+
+.paragraph {
+  line-height: 150%;
 }
 
 .header a,
@@ -123,12 +123,13 @@ ul.menu li a {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  padding: 0 2rem 2rem;
+  padding: 0 0 2rem;
 }
 
 #left,
 #right {
   vertical-align: top;
+  padding: 0 2rem;
 }
 
 #left {
@@ -138,6 +139,14 @@ ul.menu li a {
 #logo {
   width: 100%;
   max-width: 600px;
+}
+
+#narrow-logo {
+  display: none;
+}
+
+#site-title {
+  font-size: 5em;
 }
 
 #right {
@@ -182,6 +191,10 @@ ul.menu {
 
 .frontimgbox {
   margin: 1rem 20%;
+}
+
+.frontimgbox img {
+  width: 100%;
 }
 
 .bookbook-ad-wrapper {
@@ -231,6 +244,7 @@ ul.menu {
 
 .author-list {
   list-style-type: none;
+  padding: 0;
 }
 
 .author-list li {
@@ -331,231 +345,49 @@ ul.menu {
   width: 100%;
 }
 
-/* 
-
-#wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-#left {
-  width: 25%;
-  float: left;
-}
-
-
-
-
-
-table.menu {
-  text-align: center;
-  font-size: 2.6em;
-}
-
-td.menu,
-td.cmenu {
-  width: 11.11%;
-}
-
-td.dot {
-  width: 11.11%;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: black;
-  text-decoration: none;
-}
-
-.showlinks a:link,
-.showlinks a:visited,
-.showlinks a:hover,
-.showlinks a:active {
-  text-decoration: underline;
-}
-
-a img {
-  text-decoration: none;
-  border: 0 none;
-}
-
-
-
-#content-wrapper {
-  overflow: auto;
-}
-
-.fronttext {
-  text-align: center;
-  width: 84%;
-  padding: 1em 8% 1em 8%;
-}
-
-.fronttextp {
-  width: 84%;
-  margin: 2em 0em 0em 0em;
-  padding: 1em 8% 0em 8%;
-}
-
-.frontimg {
-  width: 100%;
-  height: auto;
-  max-width: 400px;
-  -moz-border-radius: 25px 25px 25px 25px;
-  -webkit-border-radius: 25px 25px 25px 25px;
-}
-
-.videoWrapper {
-  position: relative;
-  padding-bottom: 75%;
-  padding-top: 2em 0 2em 0;
-  height: 0;
-}
-
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  height: 80%;
-  width: 80%;
-}
-
-.book-image-box {
-  float: left;
-  width: 40%;
-}
-
-.book-image {
-  width: 100%;
-  max-width: 300px;
-  float: left;
-}
-
-.book-clear {
-  clear: both;
-}
-
-.storeitem {
-  border: 1px dashed black;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  padding: 10px;
-}
-
-.ainfo {
-  width: 70%;
-  float: left;
-}
-
-.aphoto {
-  float: left;
-  width: 20%;
-  margin: 0% 5% 0% 5%;
-}
-
-.aphotoimg {
-  float: left;
-  width: 100%;
-  max-width: 400px;
-  -moz-border-radius: 5px 5px 5px 5px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-}
-
-.square-button {
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-  padding: 10px;
-  margin: 10px;
-  width: 120px;
-  text-align: center;
-  background-color: grey;
-  border: 2px solid black;
-  font-family: sans-serif;
-}
-
-.square-button:hover {
-  background-color: white;
-}
-
-@media (min-width: 2400px) {
-  #right {
-    width: 50%;
-    border: none;
-    margin-right: 25%;
+@media (max-width: 850px) {
+  .triple {
+    font-size: 4em;
   }
-  table.menu {
-    text-align: center;
+
+  #site-title {
+    font-size: 4em;
+  }
+
+  .frontimgbox {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  #left {
+    display: none;
+  }
+
+  #right {
+    flex-basis: 100%;
+  }
+
+  #site-title {
     font-size: 3em;
   }
-  .triple {
-    font-size: 6em;
-  }
-  .med {
-    font-size: 2.4em;
-  }
-  .small {
+
+  .bigmed {
     font-size: 2em;
   }
-  .smmed {
-    font-size: 2em;
-  }
-}
 
-@media (max-width: 800px) {
-  table.menu {
-    text-align: center;
-    font-size: 1.8em;
+  #narrow-logo {
+    display: inline-block;
   }
-  .triple {
-    font-size: 2.6em;
-  }
-  .med {
-    font-size: 1.8em;
-  }
-  .small {
-    font-size: 1.4em;
-  }
-  .smmed {
-    font-size: 1.4em;
-  }
-  .bold {
-    font-weight: normal;
-  }
-  .italic {
-    font-style: normal;
-  }
-  .frontimgbox {
-    padding: 1em 18% 1em 18%;
-    width: 64%;
-  }
-}
 
-@media (max-width: 500px) {
-  table.menu {
-    text-align: center;
-    font-size: 1em;
+  #narrow-logo img {
+    width: 50px;
   }
-  .triple {
-    font-size: 1.6em;
-  }
-  .med {
-    font-size: 1.2em;
-  }
-  .small {
-    font-size: 1em;
-  }
-  .smmed {
-    font-size: 1em;
-  }
-  .frontimgbox {
-    padding: 1em 8% 1em 8%;
-    width: 84%;
-  }
-  .storecontainer {
-    width: 50%;
+
+  ul.menu {
+    flex-direction: column;
+    line-height: 100%;
+    margin: 1.5em 0;
   }
 }
-*/
