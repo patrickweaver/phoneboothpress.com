@@ -5,16 +5,12 @@
 
 @font-face {
   font-family: "stm";
-  src: url("/fonts/GoudyStM-webfont.eot") format("embedded-opentype"),
-    url("/fonts/GoudyStM-webfont.ttf") format("truetype"),
-    url("/fonts/GoudyStM-webfont.svg#stm") format("svg");
+  src: url("/fonts/GoudyStM-webfont.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "istm";
-  src: url("/fonts/GoudyStM-Italic-webfont.eot") format("embedded-opentype"),
-    url("/fonts/GoudyStM-Italic-webfontt.ttf") format("truetype"),
-    url("/fonts/GoudyStM-Italic-webfont.svg#istm") format("svg");
+  src: url("/fonts/GoudyStM-Italic-webfontt.ttf") format("truetype");
 }
 
 * {
